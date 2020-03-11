@@ -15,6 +15,7 @@ class BioseleniumSpider(scrapy.Spider):
     	url = 'https://bionetz.ch/adressen/detailhandel/bio-fachgeschaefte.html'
     	# Hier integrieren wir den Webdriver
     	self.driver = webdriver.Chrome('C:\webdrivers\chromedriver.exe')
+    	self.driver = webdriver.Chrome('/Users/NSonderegger/Desktop/chromedriver')
     	self.driver.get(url)
     	#Wir benoetigen eine while-Schleife, die ueberprueft, ob es noch eine naechste Seite gibt oder nicht
     	while self.driver.find_elements_by_xpath('//*[@title="Weiter"]'):
